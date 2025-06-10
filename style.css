@@ -1,0 +1,206 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #1a1a1a;
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav h1 {
+            font-size: 1.5rem calc();
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f0c14b;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #skills {
+            background: linear-gradient(to right, #74ebf6, #0a0b0b);
+            color: rgb(255, 255, 255);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 300px;
+            background-color: #93e8ff;
+        }
+
+        .skills {
+            text-align: right;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: rgb(2, 2, 2);
+        }
+
+        .html {
+            width: 50%;
+            background-color: #ffffff;
+        }
+
+        .css {
+            width: 50%;
+            background-color: #ffffff;
+        }
+
+        .database {
+            width: 65%;
+            background-color: #ffffff;
+        }
+
+
+        #home {
+            background: linear-gradient(to right, #74ebf6, #0a0b0b);
+            color: white;
+        }
+
+        #home h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        #about,
+        #projects,
+        #contact,
+        #Pendidikan {
+            background: linear-gradient(to right, #74ebf6, #0a0b0b);
+            color: aliceblue;
+        }
+
+        #about h2,
+        #projects h2,
+        #contact h2,
+        #Pendidikan h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+
+        }
+
+        .pendidikan .pendidikan-box {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #about p {
+            max-width: 600px;
+            margin-bottom: 1rem;
+        }
+
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 1rem;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            margin: 1rem 0;
+        }
+
+        #contact a {
+            color: #4facfe;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact a:hover {
+            text-decoration: none;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            section {
+                padding: 4rem 1rem;
+            }
+        }
