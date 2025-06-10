@@ -1,19 +1,23 @@
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    font-size: 16px;
+    /* Base font size */
 }
 
+/* Header and Navigation */
 header {
     background: #1a1a1a;
     color: white;
-    padding: 1rem;
+    padding: 1em;
     position: fixed;
     width: 100%;
     top: 0;
@@ -26,6 +30,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 1em;
 }
 
 nav h1 {
@@ -38,7 +43,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 2rem;
+    margin-left: 1.5em;
 }
 
 nav ul li a {
@@ -52,8 +57,9 @@ nav ul li a:hover {
     color: #f0c14b;
 }
 
+/* Sections */
 section {
-    padding: 5rem 2rem;
+    padding: 5em 2em;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -62,61 +68,30 @@ section {
     text-align: center;
 }
 
-#skills {
-    background: linear-gradient(to right, #74ebf6, #0a0b0b);
-    color: white;
-}
-
-.container {
-    width: 100%;
-    max-width: 300px;
-    background-color: #93e8ff;
-    margin: 0 auto;
-}
-
-.skills {
-    text-align: right;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: black;
-}
-
-.html {
-    width: 50%;
-    background-color: #ffffff;
-}
-
-.css {
-    width: 50%;
-    background-color: #ffffff;
-}
-
-.database {
-    width: 65%;
-    background-color: #ffffff;
-}
-
+/* Home Section */
 #home {
     background: linear-gradient(to right, #74ebf6, #0a0b0b);
     color: white;
 }
 
 #home h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
 }
 
 #home img {
     width: 200px;
-    height: 240px;
-    margin-bottom: 1rem;
+    height: auto;
+    margin-bottom: 1em;
 }
 
 #home p {
     font-size: 1.2rem;
     max-width: 600px;
+    margin: 0 auto;
 }
 
+/* About, Projects, Contact, Pendidikan Sections */
 #about,
 #projects,
 #contact,
@@ -130,64 +105,79 @@ section {
 #contact h2,
 #Pendidikan h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5em;
 }
 
 #about p {
     max-width: 600px;
-    margin-bottom: 1rem;
+    margin: 0 auto;
+    margin-bottom: 1em;
 }
 
+/* Pendidikan Section */
 #Pendidikan .pendidikan-box {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#Pendidikan .pendidikan-box .ponpes,
-#Pendidikan .pendidikan-box .umsu {
-    margin-bottom: 2rem;
+#Pendidikan .pendidikan-box>div {
+    margin: 1em;
+    flex: 1 1 300px;
+    /* Distribute space evenly */
 }
 
 #Pendidikan img {
     width: 100%;
     max-width: 250px;
     height: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5em;
 }
 
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    max-width: 1200px;
-}
-
-.project-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 1rem;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card img {
+/* Projects Section */
+#projects img {
     width: 100%;
-    border-radius: 8px;
-    height: 150px;
-    object-fit: cover;
+    max-width: 350px;
+    height: auto;
+    margin-bottom: 1em;
 }
 
-.project-card h3 {
-    margin: 1rem 0;
+/* Skills Section */
+#skills {
+    background: linear-gradient(to right, #74ebf6, #0a0b0b);
+    color: white;
 }
 
+#skills .container {
+    width: 100%;
+    max-width: 400px;
+    background-color: #93e8ff;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+
+#skills .skills {
+    text-align: right;
+    padding: 0.5em;
+    color: black;
+}
+
+#skills .html {
+    width: 50%;
+    background-color: #ffffff;
+}
+
+#skills .css {
+    width: 50%;
+    background-color: #ffffff;
+}
+
+#skills .database {
+    width: 65%;
+    background-color: #ffffff;
+}
+
+/* Contact Section */
 #contact {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -199,65 +189,115 @@ section {
 }
 
 #contact a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
+/* Footer */
 footer {
     background: #1a1a1a;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1em;
 }
 
-/* Media query untuk layar yang lebih kecil */
-@media (max-width: 768px) {
+/* Media Queries */
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+
     nav {
         flex-direction: column;
         align-items: center;
     }
 
     nav h1 {
-        margin-bottom: 1rem;
+        margin-bottom: 0.5em;
     }
 
     nav ul {
         flex-direction: column;
-        align-items: center;
     }
 
     nav ul li {
-        margin: 0.5rem 0;
+        margin: 0.5em 0;
     }
 
     section {
-        padding: 4rem 1rem;
+        padding: 3em 1em;
     }
 
     #home h2 {
-        font-size: 2rem;
+        font-size: 2em;
     }
 
     #home img {
         width: 150px;
-        height: 180px;
     }
 
     #home p {
-        font-size: 1rem;
+        font-size: 1.1em;
     }
 
     #about h2,
     #projects h2,
     #contact h2,
     #Pendidikan h2 {
-        font-size: 1.7rem;
+        font-size: 1.8em;
     }
 
-    #Pendidikan .pendidikan-box {
-        flex-direction: column;
+    #Pendidikan .pendidikan-box>div {
+        flex: 1 1 100%;
+        /* Full width on small screens */
+    }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
     }
 
-    .project-card {
-        width: 100%;
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 0 1em;
+    }
+
+    #home h2 {
+        font-size: 2.2em;
+    }
+
+    #home img {
+        width: 180px;
+    }
+
+    #Pendidikan .pendidikan-box>div {
+        flex: 1 1 45%;
+        /* Two columns on medium screens */
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 769px) {
+    body {
+        font-size: 16px;
+    }
+
+    nav {
+        flex-direction: row;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    #Pendidikan .pendidikan-box>div {
+        flex: 1 1 30%;
+        /* Three columns on large screens */
     }
 }
